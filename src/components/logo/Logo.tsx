@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Logo = () => {
     return (
-        <StyledLogo>&lt;JR/&gt;</StyledLogo>
+        <StyledLogo>&lt;BG/&gt;</StyledLogo>
     );
 };
 
@@ -12,4 +12,6 @@ const StyledLogo = styled.p`
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    font-size: 35px;
+    font-weight: 700;
 `

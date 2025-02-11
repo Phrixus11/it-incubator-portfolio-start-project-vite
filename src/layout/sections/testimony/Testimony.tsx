@@ -19,6 +19,9 @@ export const Testimony = () => {
 };
 
 const StyledTestimony = styled.section`
-    min-height: 50vh;
-    background-color: bisque;
+    min-height: 100%;
+    
+    ${SectionTitle} {
+        margin-bottom: 72px;
+    }
 `

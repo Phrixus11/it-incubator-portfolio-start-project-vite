@@ -1,9 +1,12 @@
 import styled from "styled-components";
-
+import logoPavan from "../../assets/img/logoPavan.png";
 
 export const Logo = () => {
     return (
-        <StyledLogo>&lt;BG/&gt;</StyledLogo>
+        // <StyledLogo>&lt;BG/&gt;</StyledLogo>
+        <StyledLogo>
+            <img src={logoPavan} alt="logo"/>
+        </StyledLogo>
     );
 };
 
@@ -14,4 +17,5 @@ const StyledLogo = styled.p`
     -webkit-text-fill-color: transparent;
     font-size: 35px;
     font-weight: 700;
+    z-index: 9999;
 `

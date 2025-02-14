@@ -4,7 +4,7 @@ type FlexWrapperPropsType = {
     direction?: "column" | "row";
     justifyContent?: string;
     alignItems?: string;
-    wrap?: "wrap";
+    wrap?: "wrap" | "wrap-reverse";
     gap?: string;
 }
 

@@ -35,6 +35,7 @@ const StyledMenu = styled.nav`
     ul {
         display: flex;
         gap: 50px;
+        flex-wrap: wrap;
     }
 `
 const Link = styled.a`
@@ -44,4 +45,5 @@ const Link = styled.a`
     line-height: 1.3;
     text-align: center;
     color: ${globalTheme.colors.menuItem};
+    white-space: nowrap;
 `

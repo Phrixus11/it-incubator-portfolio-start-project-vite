@@ -25,6 +25,7 @@ const StyledSkill = styled.div`
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
+    flex-grow: 1;
 `
 
 const SkillTitle = styled.h3`

@@ -8,9 +8,9 @@ import {TextTitle} from "../../../components/TextTitle.tsx";
 export const Projects = () => {
     return (
         <StyledProjects id={'projects'}>
-            <SectionTitle>My projects</SectionTitle>
+            <SectionTitle>Projects</SectionTitle>
             <TextTitle>Things I’ve built so far</TextTitle>
-            <FlexWrapper justifyContent={'space-around'} wrap={'wrap'} gap={'50px'} alignItems={'flex-start'}>
+            <FlexWrapper justifyContent={'space-around'} wrap={'wrap'} gap={'50px'}>
                 {globalTheme.projectItems.map((item) => (
                     <Project src={item.src} title={item.title} textStack={item.textStack} textContent={item.textContent}/>
                 ))}
@@ -21,5 +21,6 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     min-height: 100%;
-    scroll-margin-top: 150px;
+    padding-top: 70px;
+    scroll-margin-top: 160px;
 `

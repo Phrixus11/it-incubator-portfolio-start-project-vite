@@ -56,7 +56,7 @@ const Pagination = styled.div`
             margin-left: 5px;
         }
 
-        &.active {
+        .active {
             width: 20px;
             background-color: #7572d5;
         }

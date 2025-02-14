@@ -23,6 +23,7 @@ export const SocialLink = () => {
 const SocialLinkStyled= styled.div`
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
     
     a { 
         max-height: 32px;

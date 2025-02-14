@@ -106,39 +106,84 @@ export const globalTheme = {
     projectItems: [
         {
             src: imgProject1,
-            title: 'Traf-O-Data (1972)',
-            textContent: 'A system for processing traffic flow data. Gates and Paul Allen developed a device that read data from road traffic counters and provided statistics to optimize transportation systems.',
-            textStack: 'Assembly',
+            title: 'Project Tile goes here',
+            textContent: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            textStack: 'HTML , JavaScript, SASS, React',
         },
         {
             src: imgProject2,
-            title: 'BASIC Interpreter for Altair 8800 (1975)',
-            textContent: 'The first commercial product by Microsoft. Gates and Allen created a BASIC language interpreter for the Altair 8800, making programming accessible to hobbyists.',
-            textStack: 'BASIC',
+            title: 'Project Tile goes here',
+            textContent: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            textStack: 'HTML , JavaScript, SASS, React',
         },
         {
             src: imgProject3,
-            title: 'Tic-Tac-Toe Game (1968)',
-            textContent: 'A simple game created for a General Electric computer, allowing a player to compete against the machine. It was one of Gates’ first programming experiments.',
-            textStack: 'BASIC',
+            title: 'Project Tile goes here',
+            textContent: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            textStack: 'HTML , JavaScript, SASS, React',
         },
         {
             src: imgProject4,
-            title: 'School Scheduling System (1970s)',
-            textContent: 'A program developed by Gates during his time at Lakeside School. It automated the scheduling of classes for students and teachers.',
-            textStack: 'Assembly',
+            title: 'Project Tile goes here',
+            textContent: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            textStack: 'HTML , JavaScript, SASS, React',
         },
         {
             src: imgProject5,
-            title: 'Payroll System',
-            textContent: 'A payroll calculation program created by Gates and Allen for a local company during their school years.',
-            textStack: 'BASIC',
+            title: 'Project Tile goes here',
+            textContent: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            textStack: 'HTML , JavaScript, SASS, React',
         },
         {
             src: imgProject6,
-            title: 'MS-DOS (1980)',
-            textContent: 'An operating system developed by Microsoft for IBM PCs. This was one of the cornerstone products that established Microsoft as a market leader in software development.',
-            textStack: 'Assembly, C',
+            title: 'Project Tile goes here',
+            textContent: 'This is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content',
+            textStack: 'HTML , JavaScript, SASS, React',
         },
-    ]
+
+    ],
+    // projectItems: [
+    //     {
+    //         src: imgProject1,
+    //         title: 'Traf-O-Data (1972)',
+    //         textContent: 'A system for processing traffic flow data. Gates and Paul Allen developed a device that read data from road traffic counters and provided statistics to optimize transportation systems.',
+    //         textStack: 'Assembly',
+    //     },
+    //     {
+    //         src: imgProject2,
+    //         title: 'BASIC Interpreter for Altair 8800 (1975)',
+    //         textContent: 'The first commercial product by Microsoft. Gates and Allen created a BASIC language interpreter for the Altair 8800, making programming accessible to hobbyists.',
+    //         textStack: 'BASIC',
+    //     },
+    //     {
+    //         src: imgProject3,
+    //         title: 'Tic-Tac-Toe Game (1968)',
+    //         textContent: 'A simple game created for a General Electric computer, allowing a player to compete against the machine. It was one of Gates’ first programming experiments.',
+    //         textStack: 'BASIC',
+    //     },
+    //     {
+    //         src: imgProject4,
+    //         title: 'School Scheduling System (1970s)',
+    //         textContent: 'A program developed by Gates during his time at Lakeside School. It automated the scheduling of classes for students and teachers.',
+    //         textStack: 'Assembly',
+    //     },
+    //     {
+    //         src: imgProject5,
+    //         title: 'Payroll System',
+    //         textContent: 'A payroll calculation program created by Gates and Allen for a local company during their school years.',
+    //         textStack: 'BASIC',
+    //     },
+    //     {
+    //         src: imgProject6,
+    //         title: 'MS-DOS (1980)',
+    //         textContent: 'An operating system developed by Microsoft for IBM PCs. This was one of the cornerstone products that established Microsoft as a market leader in software development.',
+    //         textStack: 'Assembly, C',
+    //     },
+    // ],
+
+    media: {
+        // tablet: 'screen and (max-width: 768px)',
+        tablet: 'screen and (max-width: 1050px)',
+        mobile: 'screen and (max-width: 368px)',
+    },
 }

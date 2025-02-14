@@ -5,6 +5,7 @@ import {SocialLink} from "../../components/socialLink/SocialLink.tsx";
 import { FlexWrapper } from "../../components/FlexWrapper.tsx";
 import {globalTheme} from "../../styles/GlobalTheme.tsx";
 import {Container} from "../../components/Container.tsx";
+import {BurgerMenu} from "./BurgerMenu.tsx";
 
 
 export const Header = () => {
@@ -12,10 +13,11 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <Logo/>
-                <FlexWrapper gap={'50px'} alignItems={'center'} justifyContent={'flex-end'}>
+                <FlexWrapper className={'menuheader'} gap={'50px'} alignItems={'center'} justifyContent={'flex-end'} wrap={'wrap'}>
                     <Menu/>
                     <SocialLink/>
                 </FlexWrapper>
+                <BurgerMenu/>
             </Container>
 
         </StyledHeader>
@@ -23,7 +25,6 @@ export const Header = () => {
 };
 
 const StyledHeader = styled.header`
-
     position: fixed;
     top: 0;
     left: 0;
@@ -35,8 +36,13 @@ const StyledHeader = styled.header`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 40px 0;
+        padding: 30px 90px;
     }
 
-    
+    @media ${globalTheme.media.tablet} {
+        ${FlexWrapper}.menuheader {
+            display: none;
+        }
+    }
+
 `

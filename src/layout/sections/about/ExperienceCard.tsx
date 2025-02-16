@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import iconBuild from '../../../assets/img/svgIcon/VectorBuild.svg';
 import iconDate from '../../../assets/img/svgIcon/vector_date.svg';
 import iconLocation from '../../../assets/img/svgIcon/vector_location.svg';
@@ -38,7 +38,7 @@ const StyledExperienceCard = styled.div`
 
     ${FlexWrapper}.spanWrapper {
         
-        width: 55%;
+        width: 48%;
         @media (max-width: 760px) {
             flex-direction: column;
         }
@@ -89,8 +89,8 @@ const Involvement = styled.span`
 `
 const NameApp = styled.span`
     display: inline-block;
-    //padding: 0 25px 0 20px;
     position: relative;
+    white-space: nowrap;
 
     &::before {
         content: "";

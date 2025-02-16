@@ -15,31 +15,30 @@ export const BlockLink = () => {
 
 const StyledBlockLink = styled.div`
     position: relative;
-
-    :first-child {
-        margin: 0 80px 0 30px;
-    }
+    display: flex;
+    gap: 60px;
+    
 
     :first-child::before {
         content: "";
         display: inline-block;
         background-image: url("${iconLink}");
-        position: absolute;
+        position: relative;
         width: 20px;
         height: 20px;
-        left: 0;
-        bottom: 3px;
+        left: -10px;
+        bottom: -4px;
     }
 
     :last-child::before {
         content: "";
         display: inline-block;
         background-image: url("${iconGitHub}");
-        position: absolute;
+        position: relative;
         width: 20px;
         height: 20px;
-        left: 174px;
-        bottom: 3px;
+        left: -10px;
+        bottom: -4px;
     }
 
 `
@@ -51,4 +50,5 @@ const Link = styled.a`
     text-decoration: underline;
     text-decoration-skip-ink: none;
     color: ${globalTheme.colors.link};
+    white-space: nowrap;
 `

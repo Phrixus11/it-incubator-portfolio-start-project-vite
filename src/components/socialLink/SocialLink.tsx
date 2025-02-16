@@ -1,8 +1,9 @@
 import {Icon} from "../icon/Icon.tsx";
 import styled from "styled-components";
+import * as React from "react";
 
 
-export const SocialLink = () => {
+export const SocialLink: React.FC = () => {
     return (
         <SocialLinkStyled>
             <a href="#">

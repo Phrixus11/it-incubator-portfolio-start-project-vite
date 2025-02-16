@@ -1,8 +1,8 @@
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
 import {Icon} from "../../../components/icon/Icon.tsx";
 import styled from "styled-components";
-import {Slider} from "../../../components/Slider.tsx";
-import { FlexWrapper } from "../../../components/FlexWrapper.tsx";
+import {Slider} from "./Slider.tsx";
+import { FlexWrapper } from "../../../components/FlexWrapper.ts";
 
 
 export const Testimony = () => {

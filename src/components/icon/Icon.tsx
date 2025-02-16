@@ -1,5 +1,6 @@
 import svgSprite from "../../assets/img/svgSprite.svg";
 import {globalTheme} from "../../styles/GlobalTheme.tsx";
+import * as React from "react";
 
 type IconPropsType = {
     iconId: string,
@@ -9,7 +10,7 @@ type IconPropsType = {
     fill?: string,
 }
 
-export const Icon = (props: IconPropsType) => {
+export const Icon: React.FC<IconPropsType> = (props: IconPropsType) => {
     return (
             <svg preserveAspectRatio="xMidYMid meet" width={props.width || "100"} height={props.height || "100"} viewBox={props.viewBox || "0 0 120 120"} fill={globalTheme.colors.menuItem} xmlns="http://www.w3.org/2000/svg">
                 <use xlinkHref={`${svgSprite}#${props.iconId}`} />

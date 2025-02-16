@@ -1,49 +1,31 @@
-import styled from "styled-components";
-import {globalTheme} from "../../styles/GlobalTheme.tsx";
+import * as React from "react";
+import { S } from "./Menu_Styles";
 
 
-export const Menu = () => {
+export const Menu: React.FC = () => {
     return (
-        <StyledMenu>
+        <S.Menu>
             <ul>
                 <li>
-                    <Link href='#home'>Home</Link>
+                    <S.Link href='#home'>Home</S.Link>
                 </li>
 
                 <li>
-                    <Link href='#about'>About</Link>
+                    <S.Link href='#about'>About</S.Link>
                 </li>
 
                 <li>
-                    <Link href='#stack'>Tech Stack</Link>
+                    <S.Link href='#stack'>Tech Stack</S.Link>
                 </li>
 
                 <li>
-                    <Link href='#projects'>Projects</Link>
+                    <S.Link href='#projects'>Projects</S.Link>
                 </li>
 
                 <li>
-                    <Link href='#contact'>Contact</Link>
+                    <S.Link href='#contact'>Contact</S.Link>
                 </li>
             </ul>
-
-        </StyledMenu>
+        </S.Menu>
     );
 };
-
-const StyledMenu = styled.nav`
-    ul {
-        display: flex;
-        gap: 50px;
-        flex-wrap: wrap;
-    }
-`
-const Link = styled.a`
-    font-family: "DM Sans", sans-serif;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.3;
-    text-align: center;
-    color: ${globalTheme.colors.menuItem};
-    white-space: nowrap;
-`

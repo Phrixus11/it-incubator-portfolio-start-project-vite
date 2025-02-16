@@ -6,7 +6,7 @@ import {GlobalStyles} from "./styles/GlobalStyles.tsx";
 
 createRoot(document.getElementById('root')!).render(
     <StrictMode>
-        <GlobalStyles/>
-        <App/>
+            <GlobalStyles/>
+            <App/>
     </StrictMode>,
 )

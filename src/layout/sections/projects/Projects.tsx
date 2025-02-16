@@ -1,26 +1,24 @@
-import styled from "styled-components";
-import {SectionTitle} from "../../../components/SectionTitle.tsx";
-import {FlexWrapper} from "../../../components/FlexWrapper.tsx";
+import {SectionTitle} from "../../../components/SectionTitle.ts";
+import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {Project} from "./project/Project.tsx";
 import {globalTheme} from "../../../styles/GlobalTheme.tsx";
-import {TextTitle} from "../../../components/TextTitle.tsx";
+import {TextTitle} from "../../../components/TextTitle.ts";
+import {Container} from "../../../components/Container.ts";
+import { S } from "./Projects_Styles.ts";
+import * as React from "react";
 
-export const Projects = () => {
+export const Projects: React.FC = () => {
     return (
-        <StyledProjects id={'projects'}>
-            <SectionTitle>Projects</SectionTitle>
-            <TextTitle>Things I’ve built so far</TextTitle>
-            <FlexWrapper justifyContent={'space-around'} wrap={'wrap'} gap={'50px'}>
-                {globalTheme.projectItems.map((item) => (
-                    <Project src={item.src} title={item.title} textStack={item.textStack} textContent={item.textContent}/>
-                ))}
-            </FlexWrapper>
-        </StyledProjects>
+        <S.Projects id={'projects'}>
+            <Container>
+                <SectionTitle>Projects</SectionTitle>
+                <TextTitle>Things I’ve built so far</TextTitle>
+                <FlexWrapper justifyContent={'center'} wrap={'wrap'} gap={'35px'}>
+                    {globalTheme.projectItems.map((item) => (
+                        <Project src={item.src} title={item.title} textStack={item.textStack} textContent={item.textContent}/>
+                    ))}
+                </FlexWrapper>
+            </Container>
+        </S.Projects>
     );
 };
-
-const StyledProjects = styled.section`
-    min-height: 100%;
-    padding-top: 70px;
-    scroll-margin-top: 160px;
-`

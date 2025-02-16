@@ -1,48 +1,27 @@
-import styled from "styled-components";
 import {Logo} from "../../components/logo/Logo.tsx";
-import {Menu} from "../../components/menu/Menu.tsx";
-import {SocialLink} from "../../components/socialLink/SocialLink.tsx";
-import { FlexWrapper } from "../../components/FlexWrapper.tsx";
-import {globalTheme} from "../../styles/GlobalTheme.tsx";
-import {Container} from "../../components/Container.tsx";
-import {BurgerMenu} from "./BurgerMenu.tsx";
+import {Container} from "../../components/Container.ts";
+import {MobileMenu} from "./MobileMenu/MobileMenu.tsx";
+import * as React from "react";
+import {S} from "./Header_Styles.ts";
+import {DesktopMenu} from "./DesktopMenu/DesktopMenu.tsx";
 
 
-export const Header = () => {
+export const Header: React.FC = () => {
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 1050;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth)
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, []);
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <Logo/>
-                <FlexWrapper className={'menuheader'} gap={'50px'} alignItems={'center'} justifyContent={'flex-end'} wrap={'wrap'}>
-                    <Menu/>
-                    <SocialLink/>
-                </FlexWrapper>
-                <BurgerMenu/>
+                {width > breakpoint ? <DesktopMenu/> : <MobileMenu/>}
             </Container>
-
-        </StyledHeader>
+        </S.Header>
     );
 };
-
-const StyledHeader = styled.header`
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    background-color: ${globalTheme.colors.primaryBg};
-    z-index: 999;
-    
-    & > ${Container} {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 30px 90px;
-    }
-
-    @media ${globalTheme.media.tablet} {
-        ${FlexWrapper}.menuheader {
-            display: none;
-        }
-    }
-
-`

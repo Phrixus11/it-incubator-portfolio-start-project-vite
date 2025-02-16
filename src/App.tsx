@@ -6,13 +6,11 @@ import {Projects} from "./layout/sections/projects/Projects.tsx";
 // import {Testimony} from "./layout/sections/testimony/Testimony.tsx";
 import {Contacts} from "./layout/sections/contacts/Contacts.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
-import {Container} from "./components/Container.tsx";
 import {About} from "./layout/sections/about/About.tsx";
 
 function App() {
     return (
         <div className="App">
-            <Container>
                 <Header/>
                 <Main/>
                 <About/>
@@ -21,7 +19,6 @@ function App() {
                 {/*<Testimony/>*/}
                 <Contacts/>
                 <Footer/>
-            </Container>
         </div>
     )
 }

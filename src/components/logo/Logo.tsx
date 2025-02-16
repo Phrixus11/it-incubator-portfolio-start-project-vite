@@ -1,9 +1,10 @@
 import styled from "styled-components";
 import logoPavan from "../../assets/img/logoPavan.png";
+import * as React from "react";
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
     return (
-        // <StyledLogo>&lt;BG/&gt;</StyledLogo>
+        // <StyledLogo>&lt;JR/&gt;</StyledLogo>
         <StyledLogo>
             <img src={logoPavan} alt="logo"/>
         </StyledLogo>

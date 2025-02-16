@@ -1,33 +1,7 @@
+import {globalTheme} from "../../../styles/GlobalTheme.tsx";
 import styled, {css} from "styled-components";
-import {globalTheme} from "../../styles/GlobalTheme.tsx";
-import {FlexWrapper} from "../../components/FlexWrapper.tsx";
-import {Menu} from "../../components/menu/Menu.tsx";
-import {SocialLink} from "../../components/socialLink/SocialLink.tsx";
-import {useState} from "react";
 
-
-export const BurgerMenu = () => {
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
-    const onBurgerClick = () => { setMenuIsOpen(!menuIsOpen) };
-    return (
-        <div>
-            <BurgerButton isOpen={menuIsOpen} onClick={onBurgerClick}>
-                <span></span>
-            </BurgerButton>
-            <StyledBergerMenu isOpen={menuIsOpen} onClick={onBurgerClick}>
-                <MobileMenu>
-                    <FlexWrapper direction={'column'} gap={'50px'} alignItems={'center'} justifyContent={'center'} wrap={'wrap'}>
-                        <Menu/>
-                        <SocialLink/>
-                    </FlexWrapper>
-                </MobileMenu>
-            </StyledBergerMenu>
-        </div>
-
-    );
-};
-
-const StyledBergerMenu = styled.div<{isOpen: boolean}>`
+const MobileMenu = styled.div<{isOpen: boolean}>`
     display: block;
     background-color: ${globalTheme.colors.primaryBg};
     position: fixed;
@@ -36,7 +10,7 @@ const StyledBergerMenu = styled.div<{isOpen: boolean}>`
     bottom: 0;
     right: 0;
     z-index: 999;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition: transform .2s;
 
     ${({ isOpen }) => isOpen && css`
@@ -65,7 +39,6 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
 
         ${({isOpen}) => isOpen && css`
             background-color: rgba(255, 255, 255, 0);
-
         `};
 
         &::before {
@@ -83,7 +56,6 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
                 transform: rotate(45deg);
                 top: 0;
             `};
-
         }
 
         &::after {
@@ -109,11 +81,16 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     }
 `
 
-const MobileMenu = styled.div`
+const MobileMenuContainer = styled.div`
     height: 100vh;
+
     ul {
         flex-direction: column;
     }
-    
-
 `
+
+export const S = {
+    MobileMenu,
+    BurgerButton,
+    MobileMenuContainer
+}

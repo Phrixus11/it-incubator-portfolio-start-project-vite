@@ -50,6 +50,35 @@ const Footer = styled.footer`
     }
 `
 
+const TextContact = styled.a`
+    display: inline-block;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.44444;
+    color: #a7a7a7;
+    white-space: nowrap;
+
+    &:hover {
+
+        background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        transform: scale(1.07) translateY(-2px);
+    }
+
+    @media ${globalTheme.media.tablet} {
+        &:hover {
+            transform: none;
+            background: transparent;
+            background-clip: unset;
+            -webkit-background-clip: unset;
+            -webkit-text-fill-color: unset;
+        }
+`
+
+
 const TextInfo = styled.span`
     display: inline-block;
     font-family: "DM Sans", sans-serif;
@@ -79,7 +108,7 @@ const TextInfo = styled.span`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
-
+    
     @media ${globalTheme.media.tablet} {
         letter-spacing: -0.5px;
     }
@@ -87,5 +116,6 @@ const TextInfo = styled.span`
 
 export const S = {
     Footer,
+    TextContact,
     TextInfo,
 }

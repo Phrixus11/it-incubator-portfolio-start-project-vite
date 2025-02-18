@@ -14,8 +14,8 @@ export const Footer: React.FC = () => {
                 <FlexWrapper justifyContent={'space-between'} alignItems={'center'}>
                     <Logo/>
                     <FlexWrapper justifyContent={'flex-end'} alignItems={'center'} gap={'30px'} wrap={'wrap'}>
-                        <S.TextInfo>+91 12345 09876</S.TextInfo>
-                        <S.TextInfo>info@example.com</S.TextInfo>
+                        <S.TextContact href={"tel:+91 12345 09876"}>+91 12345 09876</S.TextContact>
+                        <S.TextContact href={"mailto:info@example.com"}>info@example.com</S.TextContact>
                         <SocialLink/>
                     </FlexWrapper>
                 </FlexWrapper>

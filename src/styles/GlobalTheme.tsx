@@ -63,8 +63,8 @@ export const globalTheme = {
         {
             iconId: 'logoTailwind',
             iconName: 'Tailwind',
-            width: '131px',
-            height: '131px',
+            width: '120px',
+            height: '120px',
             viewBox: '0 0 131 131',
         },
         {
@@ -84,15 +84,15 @@ export const globalTheme = {
         {
             iconId: 'logoGreensocs',
             iconName: 'GreenSocs',
-            width: '120px',
-            height: '120px',
+            width: '105px',
+            height: '105px',
             viewBox: '0 0 120 120',
         },
         {
             iconId: 'logoVSCode',
             iconName: 'VSCode',
-            width: '112px',
-            height: '112px',
+            width: '105px',
+            height: '105px',
             viewBox: '0 0 112 112',
         },
         {
@@ -186,4 +186,7 @@ export const globalTheme = {
         tablet: 'screen and (max-width: 1050px)',
         mobile: 'screen and (max-width: 368px)',
     },
+
+    transition: "0.3s ease",
+    animationWave: '2s linear 0s infinite alternate none running',
 }

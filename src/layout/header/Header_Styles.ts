@@ -11,6 +11,7 @@ const Header = styled.header`
     right: 0;
     background-color: ${globalTheme.colors.primaryBg};
     z-index: 999;
+    overflow: clip;
     
     & > ${Container} {
         display: flex;

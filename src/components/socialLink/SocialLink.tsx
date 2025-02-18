@@ -1,7 +1,8 @@
 import {Icon} from "../icon/Icon.tsx";
 import styled from "styled-components";
 import * as React from "react";
-
+import svgSprite from "../../assets/img/svgSprite.svg";
+import {globalTheme} from "../../styles/GlobalTheme.tsx";
 
 export const SocialLink: React.FC = () => {
     return (
@@ -26,7 +27,17 @@ const SocialLinkStyled= styled.div`
     gap: 20px;
     flex-wrap: wrap;
     
-    a { 
+    a {
         max-height: 32px;
+        transition: ${globalTheme.transition};
+        
+        &:hover {
+            transform: scale(1.1) translateY(-2px);
+
+            svg {
+                fill: url(${svgSprite}#grad1);
+            }
+        }
     }
 `
+

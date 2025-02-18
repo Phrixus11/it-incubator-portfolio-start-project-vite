@@ -10,8 +10,9 @@ const MobileMenu = styled.div<{isOpen: boolean}>`
     bottom: 0;
     right: 0;
     z-index: 999;
+    opacity: 0.9;
     transform: translateX(100%);
-    transition: transform .2s;
+    transition: ${globalTheme.transition};
 
     ${({ isOpen }) => isOpen && css`
         transform: translateX(0); 
@@ -19,12 +20,12 @@ const MobileMenu = styled.div<{isOpen: boolean}>`
 `
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
-    position: fixed;
+    position: relative;
     display: none;
     width: 50px;
     height: 50px;
-    top: 40px;
-    right: 50px;
+    top: -5px;
+    right: -50px;
     z-index: 99999;
 
     span {
@@ -48,7 +49,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             height: 3px;
             border-radius: 5px;
             background-color: ${globalTheme.colors.title};
-            transition: transform .2s;
+            transition: ${globalTheme.transition};
             position: absolute;
             top: -10px;
 
@@ -65,7 +66,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             height: 3px;
             border-radius: 5px;
             background-color: ${globalTheme.colors.title};
-            transition: transform .3s;
+            transition: ${globalTheme.transition};
             position: absolute;
             bottom: -10px;
 

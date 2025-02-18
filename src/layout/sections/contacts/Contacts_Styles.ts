@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const Contacts = styled.section`
     min-height: 100%;
-    scroll-margin-top: 200px;
 `
 
 const Form = styled.form`

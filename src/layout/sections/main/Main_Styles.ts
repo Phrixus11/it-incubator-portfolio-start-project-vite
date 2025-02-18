@@ -2,18 +2,19 @@ import {globalTheme} from "../../../styles/GlobalTheme.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/FlexWrapper.ts";
 import {font} from "../../../styles/Commons.ts";
-import abstract from "../../../assets/img/Abstract.png"
+import abstract from "../../../assets/img/Abstract.svg"
+import {HelloAnimation, waveAnimation} from "../../../styles/animations/Animations.tsx";
+
 
 const Main = styled.section`
-    min-height: 70vh;
+    min-height: 110vh;
     display: flex;
     align-items: center;
-    scroll-margin-top: 200px;
-    margin-top: 142px;
+    scroll-margin-top: 200px;;
     overflow-x: clip;
 
     @media ${globalTheme.media.tablet} {
-        margin: 130px 0 100px;
+        margin-top: 100px;
         ${FlexWrapper} {
             flex-direction: column-reverse;
             justify-content: center;
@@ -24,9 +25,14 @@ const Main = styled.section`
 const MainText = styled.p`
     ${font({weight: 700, Fmax: 58, Fmin: 36, color: globalTheme.colors.mainText })}
     letter-spacing: -0.02em;
+    
+    span {
+        display: inline-block;
+        animation: ${HelloAnimation} 1s linear infinite alternate;
+    }
 `
 
-const Name = styled.h2`
+const Name = styled.p`
     ${font({weight: 700, Fmax: 58, Fmin: 36 })}
     letter-spacing: -0.02em;
     background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
@@ -38,6 +44,10 @@ const Name = styled.h2`
 const MainTitle = styled.h2`
     ${font({weight: 700, Fmax: 58, Fmin: 36, color: globalTheme.colors.mainText })}
     letter-spacing: -0.02em;
+    
+    p {
+        display: none;
+    }
 `
 
 const Photo = styled.img`
@@ -59,16 +69,23 @@ const PhotoWrapper = styled.div`
     background: linear-gradient(0deg, #13b0f5 0%, #e70faa 100%);
     border-radius: 230px;
     position: relative;
-
+    
     &::after {
         content: '';
         display: inline-block;
         position: absolute;
         width: 630px;
         height: 630px;
-        background-image: url(${abstract});
         bottom: -130px;
         right: -150px;
+        animation: ${waveAnimation} ${globalTheme.animationWave} ;
+        background: linear-gradient(to right, #13b0f5, #e70faa);
+        -webkit-mask-image: url("${abstract}");
+        mask-image: url("${abstract}");
+        mask-repeat: no-repeat;
+        mask-size: cover;
+        opacity: 0.9;
+        
     }
     @media ${globalTheme.media.tablet} {
         margin: 0 0 60px

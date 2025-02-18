@@ -4,6 +4,8 @@ import {globalTheme} from "../../../styles/GlobalTheme.tsx";
 const Projects = styled.section`
     min-height: 100%;
     padding-top: 70px;
+    position: relative;
+    overflow-x: clip;
 `
 
 const Project = styled.div`
@@ -12,7 +14,7 @@ const Project = styled.div`
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: ${globalTheme.colors.bgProjectCard};
     border-radius: 20px;
-    transition: 0.3s;
+    transition: ${globalTheme.transition};
     flex-grow: 1;
 
     &:hover {
@@ -20,6 +22,10 @@ const Project = styled.div`
 
         & > img {
             filter: grayscale(0);
+        }
+
+        @media ${globalTheme.media.tablet} {
+            transform: none;
         }
     }
 `
@@ -30,7 +36,11 @@ const Img = styled.img`
     width: 100%;
     height: 260px;
     filter: grayscale(0.5);
-    transition: 0.3s;
+    transition: ${globalTheme.transition};
+
+    @media ${globalTheme.media.tablet} {
+        filter: grayscale(0);
+    }
 
     &:hover {
         cursor: pointer;

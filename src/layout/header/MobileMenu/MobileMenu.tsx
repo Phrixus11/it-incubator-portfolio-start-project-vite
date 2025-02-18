@@ -6,6 +6,7 @@ import * as React from "react";
 import { S } from "./MobileMenu_Styles.ts";
 
 
+
 export const MobileMenu: React.FC = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     const onBurgerClick = () => { setMenuIsOpen(!menuIsOpen) };
@@ -18,7 +19,7 @@ export const MobileMenu: React.FC = () => {
             <S.MobileMenu isOpen={menuIsOpen} onClick={onBurgerClick}>
                 <S.MobileMenuContainer>
                     <FlexWrapper direction={'column'} gap={'50px'} alignItems={'center'} justifyContent={'center'} wrap={'wrap'}>
-                        <Menu/>
+                        <Menu click={onBurgerClick}/>
                         <SocialLink/>
                     </FlexWrapper>
                 </S.MobileMenuContainer>

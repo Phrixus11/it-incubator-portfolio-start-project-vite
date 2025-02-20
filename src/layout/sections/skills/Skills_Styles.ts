@@ -2,8 +2,8 @@ import styled from "styled-components";
 import {globalTheme} from "../../../styles/GlobalTheme.tsx";
 
 const Skills = styled.section`
-    padding-top: 95px;
     overflow-x: clip;
+    padding-top: 200px;
 `
 
 const GridWrapper = styled.div`

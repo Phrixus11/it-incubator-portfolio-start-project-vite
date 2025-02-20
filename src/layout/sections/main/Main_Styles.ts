@@ -7,18 +7,23 @@ import {HelloAnimation, waveAnimation} from "../../../styles/animations/Animatio
 
 
 const Main = styled.section`
-    min-height: 110vh;
+    min-height: 90vh;
     display: flex;
     align-items: center;
-    scroll-margin-top: 200px;;
     overflow-x: clip;
+    padding-top: 130px;
+    margin-bottom: 150px;
 
     @media ${globalTheme.media.tablet} {
-        margin-top: 100px;
+        padding-top: 130px;
         ${FlexWrapper} {
             flex-direction: column-reverse;
             justify-content: center;
         }
+    }
+    @media ${globalTheme.media.mobile} {
+        padding-top: 130px;
+        //padding-bottom: 170px;
     }
 `
 

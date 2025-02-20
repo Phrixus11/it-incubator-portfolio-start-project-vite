@@ -25,7 +25,6 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
     width: 50px;
     height: 50px;
     top: -5px;
-    right: -50px;
     z-index: 99999;
 
     span {

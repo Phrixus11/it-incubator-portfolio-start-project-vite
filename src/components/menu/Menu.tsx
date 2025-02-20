@@ -1,25 +1,13 @@
-import * as React from "react";
 import {S} from "./Menu_Styles";
-import {useEffect} from "react";
-import {Events, scrollSpy} from "react-scroll";
-
+import * as React from "react";
 
 type MobileMenuPropsType = {
     click?: () => void;
 }
 
 export const Menu: React.FC<MobileMenuPropsType> = ({click}) => {
-    useEffect(() => {
-        Events.scrollEvent.register("begin", () => console.log("Начало скролла"));
-        Events.scrollEvent.register("end", () => console.log("Конец скролла"));
 
-        scrollSpy.update(); // Обновляем отслеживание активных элементов
-
-        return () => {
-            Events.scrollEvent.remove("begin");
-            Events.scrollEvent.remove("end");
-        };
-    }, []);
+    console.log("рендер")
 
     return (
         <S.Menu>
@@ -47,7 +35,8 @@ export const Menu: React.FC<MobileMenuPropsType> = ({click}) => {
                                 activeClass="active"
                                 spy={true}
                                 to='stack'
-                                smooth={true}>Tech Stack</S.LinkMenu>
+                                smooth={true}
+                                >Tech Stack</S.LinkMenu>
                 </li>
 
                 <li>
@@ -55,7 +44,8 @@ export const Menu: React.FC<MobileMenuPropsType> = ({click}) => {
                                 activeClass="active"
                                 spy={true}
                                 to='projects'
-                                smooth={true}>Projects</S.LinkMenu>
+                                smooth={true}
+                                offset={50}>Projects</S.LinkMenu>
                 </li>
 
                 <li>
@@ -64,7 +54,7 @@ export const Menu: React.FC<MobileMenuPropsType> = ({click}) => {
                                 spy={true}
                                 to='contact'
                                 smooth={true}
-                                offset={-150}>Contact</S.LinkMenu>
+                                offset={50}>Contact</S.LinkMenu>
                 </li>
             </ul>
         </S.Menu>

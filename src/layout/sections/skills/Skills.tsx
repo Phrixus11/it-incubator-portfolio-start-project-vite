@@ -13,7 +13,7 @@ export const Skills: React.FC = () => {
     return (
         <S.Skills id={'stack'}>
             <Container>
-                <Fade>
+                <Fade damping={0.5} direction={"down"}>
                     <SectionTitle>My Tech Stack</SectionTitle>
                     <TextTitle>Technologies I’ve been working with recently</TextTitle>
                 </Fade>

@@ -7,12 +7,11 @@ import {Projects} from "./layout/sections/projects/Projects.tsx";
 import {Contacts} from "./layout/sections/contacts/Contacts.tsx";
 import {Footer} from "./layout/footer/Footer.tsx";
 import {About} from "./layout/sections/about/About.tsx";
-// import {Particle} from "./components/particle/Particle.tsx";
 
 function App() {
     return (
-        <div className="App" id={"scroll-container"}>
-            {/*<Particle/>*/}
+        <div className="App">
+
             <Header/>
             <Main/>
             <About/>
@@ -21,6 +20,7 @@ function App() {
             {/*<Testimony/>*/}
             <Contacts/>
             <Footer/>
+
         </div>
     )
 }

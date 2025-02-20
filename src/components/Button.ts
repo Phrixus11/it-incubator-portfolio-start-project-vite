@@ -23,6 +23,11 @@ export const Button = styled.button`
         border-image-slice: 1;
     }
 
+    &:active {
+        transform: translateY(5px);
+    }
+
+
     @media ${globalTheme.media.tablet} {
         &:hover {
             transform: none;
@@ -32,4 +37,8 @@ export const Button = styled.button`
             -webkit-text-fill-color: unset;
             border-image-source: unset;
         }
+        &:active {
+            transform: translateY(5px);
+        }
+    }
 `

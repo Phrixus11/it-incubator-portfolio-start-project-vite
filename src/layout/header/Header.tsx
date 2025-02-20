@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
     const breakpoint = 1050;
 
     React.useEffect(() => {
-        const handleWindowResize = () => setWidth(window.innerWidth)
+        const handleWindowResize = () => window.innerWidth > 1050 ? setWidth(1060) : setWidth(1040)
         window.addEventListener("resize", handleWindowResize);
         return () => window.removeEventListener("resize", handleWindowResize);
     }, []);
@@ -20,7 +20,7 @@ export const Header: React.FC = () => {
         <S.Header>
             <Container>
                 <Logo/>
-                {width > breakpoint ? <DesktopMenu/> : <MobileMenu/>}
+                {width > breakpoint ? <DesktopMenu key="desktop"/> : <MobileMenu key="mobile"/>}
             </Container>
         </S.Header>
     );

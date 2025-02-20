@@ -17,14 +17,14 @@ const Header = styled.header`
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 30px 90px;
+        padding: 30px 35px;
     }
 
-    @media ${globalTheme.media.tablet} {
-        ${Container} > ${FlexWrapper} {
-            display: none;
-        }
-    }
+    // @media ${globalTheme.media.tablet} {
+    //     ${Container} > ${FlexWrapper} {
+    //         display: none;
+    //     }
+    // }
 `
 
 export const S = {

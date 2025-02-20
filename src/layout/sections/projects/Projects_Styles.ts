@@ -3,9 +3,9 @@ import {globalTheme} from "../../../styles/GlobalTheme.tsx";
 
 const Projects = styled.section`
     min-height: 100%;
-    padding-top: 70px;
     position: relative;
     overflow-x: clip;
+    padding-top: 200px;
 `
 
 const Project = styled.div`

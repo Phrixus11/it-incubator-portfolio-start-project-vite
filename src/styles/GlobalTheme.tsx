@@ -184,7 +184,7 @@ export const globalTheme = {
     media: {
         // tablet: 'screen and (max-width: 768px)',
         tablet: 'screen and (max-width: 1050px)',
-        mobile: 'screen and (max-width: 368px)',
+        mobile: 'screen and (max-width: 375px)',
     },
 
     transition: "0.3s ease",

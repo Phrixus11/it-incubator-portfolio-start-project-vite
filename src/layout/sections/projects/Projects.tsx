@@ -12,18 +12,20 @@ export const Projects: React.FC = () => {
     return (
         <S.Projects id={'projects'}>
             <Container>
-                <Fade damping={0.5} direction={"down"} >
+                <Fade damping={0.5} direction={"down"}>
                     <SectionTitle>Projects</SectionTitle>
                     <TextTitle>Things I’ve built so far</TextTitle>
                 </Fade>
-                <FlexWrapper justifyContent={'center'} wrap={'wrap'} gap={'35px'}>
-                    <Fade damping={0.2} direction={"down"}>
+                <Fade cascade={true} damping={0.2}>
+                    <FlexWrapper justifyContent={'center'} wrap={'wrap'} gap={'35px'}>
+
                         {globalTheme.projectItems.map((item) => (
                             <Project src={item.src} title={item.title} textStack={item.textStack}
                                      textContent={item.textContent}/>
                         ))}
-                    </Fade>
-                </FlexWrapper>
+
+                    </FlexWrapper>
+                </Fade>
             </Container>
         </S.Projects>
     );

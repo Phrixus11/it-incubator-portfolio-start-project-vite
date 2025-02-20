@@ -28,8 +28,9 @@ const Main = styled.section`
 `
 
 const MainText = styled.p`
-    ${font({weight: 700, Fmax: 58, Fmin: 36, color: globalTheme.colors.mainText })}
+    ${font({weight: 700, Fmax: 58, Fmin: 36})}
     letter-spacing: -0.02em;
+    color: ${({theme})=> theme.colors.mainText};
     
     span {
         display: inline-block;
@@ -47,8 +48,9 @@ const Name = styled.p`
 `
 
 const MainTitle = styled.h2`
-    ${font({weight: 700, Fmax: 58, Fmin: 36, color: globalTheme.colors.mainText })}
+    ${font({weight: 700, Fmax: 58, Fmin: 36, })}
     letter-spacing: -0.02em;
+    color: ${({theme})=> theme.colors.mainText};
     
     p {
         display: none;

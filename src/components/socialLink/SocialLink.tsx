@@ -3,20 +3,23 @@ import styled from "styled-components";
 import * as React from "react";
 import svgSprite from "../../assets/img/svgSprite.svg";
 import {globalTheme} from "../../styles/GlobalTheme.tsx";
+import { useTheme } from "../../styles/ThemeContext.tsx"
 
 export const SocialLink: React.FC = () => {
+    const { theme } = useTheme();
+
     return (
         <SocialLinkStyled>
             <a href="#">
-                <Icon width={'32'} height={'32'} viewBox={'0 0 32 32'} iconId={"iconGitHub"}/>
+                <Icon width={'32'} height={'32'} viewBox={'0 0 32 32'} iconId={"iconGitHub"} fill={theme.colors.menuItem}/>
             </a>
 
             <a href="#">
-                <Icon width={'32'} height={'32'} viewBox={'0 0 32 32'}  iconId={"iconTwitter"}/>
+                <Icon width={'32'} height={'32'} viewBox={'0 0 32 32'}  iconId={"iconTwitter"} fill={theme.colors.menuItem}/>
             </a>
 
             <a href="#">
-                <Icon width={'32'} height={'32'} viewBox={'0 0 32 32'}  iconId={"iconLinkedid"}/>
+                <Icon width={'32'} height={'32'} viewBox={'0 0 32 32'}  iconId={"iconLinkedid"} fill={theme.colors.menuItem}/>
             </a>
         </SocialLinkStyled>
     );

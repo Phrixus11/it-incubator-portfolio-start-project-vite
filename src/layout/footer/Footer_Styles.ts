@@ -56,7 +56,7 @@ const TextContact = styled.a`
     font-weight: 400;
     font-size: 18px;
     line-height: 1.44444;
-    color: #a7a7a7;
+    color: ${({theme}) => theme.colors.titleDescription};
     white-space: nowrap;
 
     &:hover {

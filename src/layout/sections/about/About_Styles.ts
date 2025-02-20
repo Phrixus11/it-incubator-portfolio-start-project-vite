@@ -18,6 +18,7 @@ const About = styled.section`
     & ${SectionTitle} {
         ${font({weight: 700, Fmax: 42, Fmin: 32})}
         margin-top: 0;
+        
     }
     
     &::after {
@@ -50,14 +51,14 @@ const About = styled.section`
 const AboutMeTitle = styled.h3`
     ${font({weight: 700, Fmax: 42, Fmin: 32})}
     letter-spacing: -0.01em;
-    color: ${globalTheme.colors.title};
+    color: ${({ theme }) => theme.colors.title};
 `
 
 const Description = styled.p`
     font-weight: 400;
     font-size: 18px;
     line-height: 1.44444;
-    color: ${globalTheme.colors.title};
+    color: ${({ theme }) => theme.colors.titleDescription};
 `
 
 const ExperienceCard = styled.div`
@@ -98,7 +99,7 @@ const TitleExperienceCard = styled.h4`
     font-size: 20px;
     line-height: 1.4;
     letter-spacing: 0.05em;
-    color: #ccc;
+    color: ${({ theme }) => theme.colors.menuItem};
 `
 
 const Involvement = styled.span`

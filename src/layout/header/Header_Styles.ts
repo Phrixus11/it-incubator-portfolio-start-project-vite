@@ -9,7 +9,7 @@ const Header = styled.header`
     top: 0;
     left: 0;
     right: 0;
-    background-color: ${globalTheme.colors.primaryBg};
+    background-color: ${({ theme }) => theme.colors.themeColor};
     z-index: 999;
     overflow: clip;
     

@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {globalTheme} from "../../../../styles/GlobalTheme.tsx";
 import iconLink from "../../../../assets/img/icon_link-chain.svg"
 import iconGitHub from "../../../../assets/img/icon_github-fill.svg"
 
@@ -22,7 +21,11 @@ const StyledBlockLink = styled.div`
     :first-child::before {
         content: "";
         display: inline-block;
-        background-image: url("${iconLink}");
+
+        background-color: ${({theme}) => theme.colors.link};
+        mask-image: url("${iconLink}");
+        -webkit-mask-image: url("${iconLink}");
+        
         position: relative;
         width: 20px;
         height: 20px;
@@ -33,7 +36,12 @@ const StyledBlockLink = styled.div`
     :last-child::before {
         content: "";
         display: inline-block;
-        background-image: url("${iconGitHub}");
+
+        background-color: ${({theme}) => theme.colors.link};
+        mask-image: url("${iconGitHub}");
+        -webkit-mask-image: url("${iconGitHub}");
+    
+        
         position: relative;
         width: 20px;
         height: 20px;
@@ -49,6 +57,6 @@ const Link = styled.a`
     line-height: 1.625;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: ${globalTheme.colors.link};
+    color: ${({theme}) => theme.colors.link};
     white-space: nowrap;
 `

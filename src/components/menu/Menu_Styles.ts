@@ -16,7 +16,7 @@ const LinkMenu = styled(Link)`
     font-size: 20px;
     line-height: 1.3;
     text-align: center;
-    color: ${globalTheme.colors.menuItem};
+    color: ${({ theme }) => theme.colors.menuItem};
     white-space: nowrap;
     cursor: pointer;
     transition: ${globalTheme.transition};

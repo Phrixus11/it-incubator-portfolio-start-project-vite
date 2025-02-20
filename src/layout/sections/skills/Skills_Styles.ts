@@ -32,7 +32,7 @@ const Skill = styled.div`
 `
 
 const SkillTitle = styled.h3`
-    color: ${globalTheme.colors.title};
+    color: ${({theme}) => theme.colors.menuItem};
     font-weight: 400;
     font-size: 24px;
     line-height: 0.8125;

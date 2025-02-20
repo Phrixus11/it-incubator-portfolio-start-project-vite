@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import {globalTheme} from "../../../styles/GlobalTheme.tsx";
 
 const Contacts = styled.section`
     min-height: 100%;
@@ -31,7 +30,7 @@ const FieldWrapper = styled.div`
 const Field = styled.input`
     width: 100%;
     border: 1px solid #a7a7a7;
-    border-radius: 4px; 
+    border-radius: 4px;
     background-color: transparent;
     padding: 10px 15px;
 
@@ -39,14 +38,14 @@ const Field = styled.input`
     font-weight: 300;
     font-size: 18px;
     line-height: 1.44444;
-    color: #ccc;
-    
+    color: ${({theme}) => theme.colors.titleCard};
+
     position: relative;
 
     &:focus-visible {
         outline: none;
     }
-    
+
     &::placeholder {
         color: transparent;
     }
@@ -56,9 +55,9 @@ const Field = styled.input`
         font-weight: 300;
         font-size: 18px;
         line-height: 1.44444;
-            color: #ccc;
+        color: ${({theme}) => theme.colors.title};
         position: absolute;
-        background-color: ${globalTheme.colors.primaryBg};
+        background-color: ${({theme}) => theme.colors.themeColor};
         border-radius: 15px;
         left: 16px;
         top: 11px;
@@ -72,17 +71,17 @@ const Field = styled.input`
     }
 
     &:-webkit-autofill {
-        box-shadow: ${globalTheme.colors.primaryBg} 0 0 0 1000px inset;
-        -webkit-text-fill-color: #ccc;
+        box-shadow: ${({theme}) => theme.colors.themeColor} 0 0 0 1000px inset;
+        -webkit-text-fill-color: ${({theme}) => theme.colors.title};
     }
-    
+
 `
 
 const Message = styled("div")`
     position: absolute;
     left: calc(50% - 142px);
     bottom: 200px;
-    background-color: #100e0e;
+    background-color: ${({theme}) => theme.colors.message};
     border-radius: 50px;
     box-shadow: 0 0 5px 2px;
 

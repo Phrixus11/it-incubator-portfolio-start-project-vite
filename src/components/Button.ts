@@ -5,7 +5,7 @@ export const Button = styled.button`
     font-family: "Poppins", sans-serif;
     font-size: 18px;
     line-height: 1.44444;
-    color: #ccc;
+    color: ${({theme}) => theme.colors.title};
     border: 1px solid #a7a7a7;
     border-radius: 4px;
     min-width: 50%;

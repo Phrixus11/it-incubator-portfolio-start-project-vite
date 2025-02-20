@@ -3,7 +3,7 @@ import styled, {css} from "styled-components";
 
 const MobileMenu = styled.div<{isOpen: boolean}>`
     display: block;
-    background-color: ${globalTheme.colors.primaryBg};
+    background-color: ${({theme}) => theme.colors.themeColor};
     position: fixed;
     top: 0;
     left: 0;
@@ -20,11 +20,13 @@ const MobileMenu = styled.div<{isOpen: boolean}>`
 `
 
 const BurgerButton = styled.button<{isOpen: boolean}>`
-    position: relative;
+    position: fixed;
     display: none;
     width: 50px;
     height: 50px;
-    top: -5px;
+    top: 37px;
+    right: 85px;
+
     z-index: 99999;
 
     span {
@@ -33,7 +35,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
         width: 36px;
         height: 3px;
         border-radius: 5px;
-        background-color: ${globalTheme.colors.title};
+        background-color: ${({theme}) => theme.colors.title};
 
         position: relative;
 
@@ -47,7 +49,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             width: 36px;
             height: 3px;
             border-radius: 5px;
-            background-color: ${globalTheme.colors.title};
+            background-color: ${({theme}) => theme.colors.title};
             transition: ${globalTheme.transition};
             position: absolute;
             top: -10px;
@@ -64,7 +66,7 @@ const BurgerButton = styled.button<{isOpen: boolean}>`
             width: 36px;
             height: 3px;
             border-radius: 5px;
-            background-color: ${globalTheme.colors.title};
+            background-color: ${({theme}) => theme.colors.title};
             transition: ${globalTheme.transition};
             position: absolute;
             bottom: -10px;

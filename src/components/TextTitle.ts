@@ -6,7 +6,7 @@ export const TextTitle = styled.p`
     ${font({weight: 400, Fmax: 32, Fmin: 22 })}
     
     text-align: center;
-    color: ${globalTheme.colors.titleText};
+    color: ${({theme})=> theme.colors.titleDescription};
     margin-top: 50px;
     margin-bottom: 113px;
 

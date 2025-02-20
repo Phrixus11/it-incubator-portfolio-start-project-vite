@@ -1,5 +1,4 @@
 import {createGlobalStyle} from "styled-components";
-import {globalTheme} from "./GlobalTheme.tsx";
 
 export const GlobalStyles = createGlobalStyle`
     *,
@@ -17,7 +16,7 @@ export const GlobalStyles = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        background-color: ${globalTheme.colors.primaryBg};
+        background-color: ${({ theme }) => theme.colors.themeColor};
         line-height: 1.2069;
         overflow-x: hidden;
         min-width: 435px;

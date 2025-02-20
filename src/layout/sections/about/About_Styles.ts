@@ -80,6 +80,7 @@ const ExperienceCard = styled.div`
         letter-spacing: 0.08em;
         color: #a7a7a7;
         padding-left: 20px;
+        white-space: normal;
     }
     
     &::after {
